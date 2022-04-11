@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head style="background-color: coral;">
+	<meta charset="ISO-8859-1">
+		<title>Revature ERS</title>
+		<div class="w3-container w3-teal">
+	<h1 style="text-align:center">Welcome to the Revature Employee Reimbursement System</h1>
+		<br>
+		<hr>
+		</div>
+		
+</head>
+	<style>	
+			.w3-card-4 {
+ 			max-width: 960px;
+  			margin: auto;
+			}
+	</style>
+	
+<body style="background-color: coral;" class=w3-card-4>
+	<br>
+	<br>
+	<form style="text-align:center" action="viewReimbursement" method="get">
+		<h3>Please sign in:</h3>
+		<label for="username">Username: </label>
+		<input id="username" name="username" type="text" placeholder="Username">
+		<br>
+		<br>
+		<label for="password">Password: </label>
+		<input id="Password" name="Password" type="password" placeholder="Password">
+		<br>
+		<br>
+		<label for="login"></label>
+		<a th:href="@{viewReimbursement}">
+		<button class="w3-button w3-hover-red">Login</button>
+		</a>
+		
+	</form>
+	<br>
+	<form style="text-align:center" action="managerLogin" method="get">
+		<a th:href="@{managerLogin}">
+		<button class="w3-button w3-hover-red">Manager Login</button>
+		</a>
+		<br>
+	</form>
+	<br>
+</body>
+
+</html>
